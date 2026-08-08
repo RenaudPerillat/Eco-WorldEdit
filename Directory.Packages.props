@@ -1,0 +1,4 @@
+<Project>
+  <Import Project="build/packages/common.props" />
+  <Import Project="build/packages/Eco/0.14.props" />
+</Project>

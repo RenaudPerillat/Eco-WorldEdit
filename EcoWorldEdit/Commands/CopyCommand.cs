@@ -7,31 +7,31 @@ using System.Collections.Generic;
 
 namespace Eco.Mods.WorldEdit.Commands
 {
-	internal class CopyCommand : WorldEditCommand
-	{
-		public CopyCommand(User user) : base(user)
-		{
-			if (!this.UserSession.Selection.IsSet()) throw new WorldEditCommandException("Please set both points first!");
-		}
+    internal class CopyCommand : WorldEditCommand
+    {
+        public CopyCommand(User user) : base(user)
+        {
+            if (!this.UserSession.Selection.IsSet()) throw new WorldEditCommandException("Please set both points first!");
+        }
 
-		protected override void Execute(WorldRange selection)
-		{
-			selection = selection.FixXZ(Shared.Voxel.World.VoxelSize);
+        protected override void Execute(WorldRange selection)
+        {
+            selection = selection.FixXZ(Shared.Voxel.World.VoxelSize);
 
-			Vector3i playerPos = this.UserSession.Player.User.Position.Round();
+            Vector3i playerPos = this.UserSession.Player.User.Position.Round();
 
-			this.UserSession.Clipboard.Clear();
-			this.UserSession.Clipboard.Dimension = new Vector3i(selection.WidthInc, selection.HeightInc, selection.LengthInc);
-			void DoAction(Vector3i pos)
-			{
-				IEnumerable<WorldEditBlock> worldEditBlocks = WorldEditBlock.Create(Eco.World.World.GetBlock(pos), pos, playerPos);
-				foreach (WorldEditBlock worldEditBlock in worldEditBlocks)
-				{
-					this.UserSession.Clipboard.Add(worldEditBlock);
-				}
-			}
-			selection.ForEachInc(DoAction);
-			this.UserSession.Clipboard.SetAuthor(new AuthorInformation(this.UserSession.User));
-		}
-	}
+            this.UserSession.Clipboard.Clear();
+            this.UserSession.Clipboard.Dimension = new Vector3i(selection.WidthInc, selection.HeightInc, selection.LengthInc);
+            void DoAction(Vector3i pos)
+            {
+                IEnumerable<WorldEditBlock> worldEditBlocks = WorldEditBlock.Create(Eco.World.World.GetBlock(pos), pos, playerPos);
+                foreach (WorldEditBlock worldEditBlock in worldEditBlocks)
+                {
+                    this.UserSession.Clipboard.Add(worldEditBlock);
+                }
+            }
+            selection.ForEachInc(DoAction);
+            this.UserSession.Clipboard.SetAuthor(new AuthorInformation(this.UserSession.User));
+        }
+    }
 }

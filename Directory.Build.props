@@ -1,0 +1,16 @@
+<Project>
+
+  <PropertyGroup>
+    <Copyright>TheKye</Copyright>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Title>EcoWorldEdit</Title>
+    <Description>Eco Systems Permissions. A Stripped down version of the Elixr Mods Permissions System</Description>
+    <PackageProjectUrl>https://mod.io/g/eco/m/ecoworldedit</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TheKye/Eco-WorldEdit</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+  </PropertyGroup>
+
+
+  <Import Project="build/frameworks/0.14.props" />
+
+</Project>

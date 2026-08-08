@@ -5,24 +5,24 @@ using System.Numerics;
 
 namespace Eco.Mods.WorldEdit.Commands
 {
-	internal class UpmeCommand : WorldEditCommand
-	{
-		private readonly int count;
+    internal class UpmeCommand : WorldEditCommand
+    {
+        private readonly int count;
 
-		public UpmeCommand(User user, int count) : base(user)
-		{
-			this.count = count;
-		}
+        public UpmeCommand(User user, int count) : base(user)
+        {
+            this.count = count;
+        }
 
-		protected override void Execute(WorldRange selection)
-		{
-			WorldEditBlockManager blockManager = new WorldEditBlockManager(this.UserSession);
+        protected override void Execute(WorldRange selection)
+        {
+            WorldEditBlockManager blockManager = new WorldEditBlockManager(this.UserSession);
 
-			Vector3 pos = this.UserSession.Player.User.Position;
-			var newpos = new Vector3i((int)pos.X, (int)pos.Y + this.count, (int)pos.Z);
-			blockManager.SetBlock(typeof(StoneBlock), newpos);
-			newpos.Y += 2;
-			this.UserSession.Player.SetPosition(newpos);
-		}
-	}
+            Vector3 pos = this.UserSession.Player.User.Position;
+            var newpos = new Vector3i((int)pos.X, (int)pos.Y + this.count, (int)pos.Z);
+            blockManager.SetBlock(typeof(StoneBlock), newpos);
+            newpos.Y += 2;
+            this.UserSession.Player.SetPosition(newpos);
+        }
+    }
 }

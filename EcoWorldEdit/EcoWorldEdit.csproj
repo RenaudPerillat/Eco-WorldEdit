@@ -1,42 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<TargetFramework>net10.0</TargetFramework>
-		<RootNamespace>Eco.Mods.WorldEdit</RootNamespace>
-		<AssemblyName>EcoWorldEdit</AssemblyName>
-		<PackageId>EcoWorldEdit</PackageId>
-		<Version>2.9.7</Version>
-		<Product>EcoWorldEdit</Product>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageProjectUrl>https://mod.io/g/eco/m/ecoworldedit</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/TheKye/Eco-WorldEdit</RepositoryUrl>
-		<RepositoryType>Github</RepositoryType>
-		<Nullable>annotations</Nullable>
-	</PropertyGroup>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-	  <DebugType>embedded</DebugType>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-	  <DebugType>none</DebugType>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Eco.ReferenceAssemblies" Version="0.14.0-beta-release-1049" />
-	</ItemGroup>
-	
-	<ItemGroup>
-		<PackageReference Include="K4os.Compression.LZ4" Version="1.2.16" />
-		<PackageReference Include="K4os.Compression.LZ4.Legacy" Version="1.2.16" />
-		<PackageReference Include="K4os.Compression.LZ4.Streams" Version="1.2.16" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-	</ItemGroup>
-	
-
-
-	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="cd $(TargetDir)&#xD;&#xA;del *.config&#xD;&#xA;del *.json" />
-	</Target>
+  <ItemGroup>
+    <PackageReference Include="Eco.ReferenceAssemblies" />
+      <PackageReference Include="K4os.Compression.LZ4"/>
+      <PackageReference Include="K4os.Compression.LZ4.Legacy"/>
+      <PackageReference Include="K4os.Compression.LZ4.Streams"/>
+      <PackageReference Include="Newtonsoft.Json"/>
+  </ItemGroup>
 
 </Project>

@@ -2,14 +2,14 @@
 
 namespace Eco.Mods.WorldEdit.Commands
 {
-	internal class WorldEditCommandException : Exception
-	{
-		public WorldEditCommandException(string message) : base(message)
-		{
-		}
+    internal class WorldEditCommandException : Exception
+    {
+        public WorldEditCommandException(string message) : base(message)
+        {
+        }
 
-		public WorldEditCommandException(string message, Exception innerException) : base(message, innerException)
-		{
-		}
-	}
+        public WorldEditCommandException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+    }
 }

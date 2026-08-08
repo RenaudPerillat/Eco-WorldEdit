@@ -1,7 +1,7 @@
 ﻿namespace Eco.Mods.WorldEdit.Model
 {
-	internal interface IWorldEditBlockData
-	{
-		IWorldEditBlockData Clone();
-	}
+    internal interface IWorldEditBlockData
+    {
+        IWorldEditBlockData Clone();
+    }
 }
