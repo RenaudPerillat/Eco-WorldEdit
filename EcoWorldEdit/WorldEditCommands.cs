@@ -364,7 +364,7 @@ namespace Eco.Mods.WorldEdit
 			}
 		}
 
-		[ChatSubCommand("WorldEdit", "export will turn your copied selection into a schematic that you can share with friends or import into a fresh world!", "export", ChatAuthorizationLevel.Admin)]
+		[ChatSubCommand("WorldEdit", "export will turn your copied selection into a schematic that you can share with friends or import into a fresh world!", "exportbp", ChatAuthorizationLevel.Admin)]
 		public static void Export(User user, string fileName)
 		{
 			try
@@ -385,7 +385,7 @@ namespace Eco.Mods.WorldEdit
 			}
 		}
 
-		[ChatSubCommand("WorldEdit", "import will import a schematic that you or someone else has exported", "import", ChatAuthorizationLevel.Admin)]
+		[ChatSubCommand("WorldEdit", "import will import a schematic that you or someone else has exported", "importbp", ChatAuthorizationLevel.Admin)]
 		public static void Import(User user, string fileName = null)
 		{
 			try
