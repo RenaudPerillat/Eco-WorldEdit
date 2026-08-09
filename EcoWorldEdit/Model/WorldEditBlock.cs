@@ -93,6 +93,9 @@ namespace Eco.Mods.WorldEdit.Model
                     relativePosition = worldObject.Position3i - offsetPosition;
                     worldEditBlock.Position = relativePosition;
                     break;
+                case FractionalBlock fractionalBlock:
+                    //Log.Debug($"{worldEditBlock.BlockType.ToString()} at {originalPosition} is a FractionalBlock");
+                    break;
                 case EmptyBlock emptyBlock:
                     //Log.Debug($"{worldEditBlock.BlockType.ToString()} at {originalPosition} is a EmptyBlock");
                     break;
