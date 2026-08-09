@@ -8,10 +8,10 @@
 
   <ItemGroup>
     <PackageReference Include="Eco.ReferenceAssemblies" />
-      <PackageReference Include="K4os.Compression.LZ4"/>
-      <PackageReference Include="K4os.Compression.LZ4.Legacy"/>
-      <PackageReference Include="K4os.Compression.LZ4.Streams"/>
-      <PackageReference Include="Newtonsoft.Json"/>
+    <PackageReference Include="K4os.Compression.LZ4"/>
+    <PackageReference Include="K4os.Compression.LZ4.Legacy"/>
+    <PackageReference Include="K4os.Compression.LZ4.Streams"/>
+    <PackageReference Include="Newtonsoft.Json"/>
   </ItemGroup>
 
 </Project>
