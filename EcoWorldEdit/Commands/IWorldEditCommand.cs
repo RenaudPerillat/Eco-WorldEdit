@@ -1,7 +1,7 @@
 ﻿namespace Eco.Mods.WorldEdit.Commands
 {
-	internal interface IWorldEditCommand
-	{
+    internal interface IWorldEditCommand
+    {
 
-	}
+    }
 }

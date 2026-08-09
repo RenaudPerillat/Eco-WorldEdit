@@ -1,0 +1,8 @@
+<Project>
+  <ItemGroup>
+	<PackageVersion Include="K4os.Compression.LZ4" Version="1.2.16" />
+	<PackageVersion Include="K4os.Compression.LZ4.Legacy" Version="1.2.16" />
+	<PackageVersion Include="K4os.Compression.LZ4.Streams" Version="1.2.16" />
+	<PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+</Project>
